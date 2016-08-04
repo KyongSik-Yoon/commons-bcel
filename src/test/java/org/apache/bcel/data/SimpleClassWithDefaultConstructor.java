@@ -18,22 +18,9 @@
 
 package org.apache.bcel.data;
 
-<<<<<<< HEAD
-public class SimpleClassWithDefaultConstructor
-{
-    public SimpleClassWithDefaultConstructor()
-    {
-    }
-
-    public static void main(final String[] argv)
-    {
-        SimpleClassWithDefaultConstructor that = new SimpleClassWithDefaultConstructor();
-    }
-=======
 public class SimpleClassWithDefaultConstructor {
 
     public SimpleClassWithDefaultConstructor() {
     }
 
->>>>>>> 7ceb5a6b8236517d708d7965f4873344c5630969
 }
