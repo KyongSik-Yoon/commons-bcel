@@ -24,9 +24,6 @@ import org.apache.bcel.generic.InstructionList;
 import org.apache.bcel.generic.MethodGen;
 import org.junit.Test;
 
-/**
- * @author sam
- */
 public class ConstantPoolTestCase extends AbstractTestCase {
     @Test
     public void testConstantToString() throws ClassNotFoundException {
