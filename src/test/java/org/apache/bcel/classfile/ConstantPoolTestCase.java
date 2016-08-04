@@ -24,6 +24,7 @@ import org.apache.bcel.generic.InstructionList;
 import org.apache.bcel.generic.MethodGen;
 import org.junit.Test;
 
+<<<<<<< HEAD
 /**
  * @author sam
  */
@@ -32,25 +33,40 @@ public class ConstantPoolTestCase extends AbstractTestCase
     @Test
     public void testConstantToString() throws ClassNotFoundException
     {
+=======
+public class ConstantPoolTestCase extends AbstractTestCase {
+    @Test
+    public void testConstantToString() throws ClassNotFoundException {
+>>>>>>> 7ceb5a6b8236517d708d7965f4873344c5630969
         JavaClass clazz = getTestClass(PACKAGE_BASE_NAME + ".data.SimpleClassWithDefaultConstructor");
         ConstantPoolGen cp = new ConstantPoolGen(clazz.getConstantPool());
 
         Method[] methods = clazz.getMethods();
 
+<<<<<<< HEAD
         for (Method method : methods)
         {
             if (method.getName().equals("<init>"))
             {
                 for (InstructionHandle instructionHandle : getInstructionHandles(clazz, cp, method))
                 {
+=======
+        for (Method method : methods) {
+            if (method.getName().equals("<init>")) {
+                for (InstructionHandle instructionHandle : getInstructionHandles(clazz, cp, method)) {
+>>>>>>> 7ceb5a6b8236517d708d7965f4873344c5630969
                     System.out.println(instructionHandle.getInstruction().toString(cp.getConstantPool()));
                 }
             }
         }
     }
 
+<<<<<<< HEAD
     private InstructionHandle[] getInstructionHandles(JavaClass clazz, ConstantPoolGen cp, Method method)
     {
+=======
+    private InstructionHandle[] getInstructionHandles(JavaClass clazz, ConstantPoolGen cp, Method method) {
+>>>>>>> 7ceb5a6b8236517d708d7965f4873344c5630969
         MethodGen methodGen = new MethodGen(method, clazz.getClassName(), cp);
         InstructionList instructionList = methodGen.getInstructionList();
         return instructionList.getInstructionHandles();
