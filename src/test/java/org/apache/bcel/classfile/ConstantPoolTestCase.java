@@ -46,4 +46,5 @@ public class ConstantPoolTestCase extends AbstractTestCase {
         InstructionList instructionList = methodGen.getInstructionList();
         return instructionList.getInstructionHandles();
     }
+
 }
