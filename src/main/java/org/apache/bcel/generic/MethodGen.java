@@ -35,6 +35,7 @@ import org.apache.bcel.classfile.LineNumber;
 import org.apache.bcel.classfile.LineNumberTable;
 import org.apache.bcel.classfile.LocalVariable;
 import org.apache.bcel.classfile.LocalVariableTable;
+import org.apache.bcel.classfile.LocalVariableTypeTable;
 import org.apache.bcel.classfile.Method;
 import org.apache.bcel.classfile.ParameterAnnotationEntry;
 import org.apache.bcel.classfile.ParameterAnnotations;
@@ -237,6 +238,8 @@ public class MethodGen extends FieldGenOrMethodGen {
                             addLocalVariable(l.getName(), Type.getType(l.getSignature()), l
                                     .getIndex(), start, end);
                         }
+                    } else if (a instanceof LocalVariableTypeTable) {
+                        // LocalVariableTypeTable should not be added code attribute.
                     } else {
                         addCodeAttribute(a);
                     }
